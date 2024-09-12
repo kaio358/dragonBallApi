@@ -1,0 +1,16 @@
+.caixaDoCard{
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px black;
+    width: 350px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-family: "Flexo-Demi", arial, sans-serif;
+}
+.caixaDeImagemCard{
+    background-color: #F2F2F2;
+}
+.imagemDosPersonagens{
+    height: 350px;
+   
+}
