@@ -9,7 +9,13 @@ function CardPersonagem(params) {
                 <img src={params.imagem} className={styles.imagemDosPersonagens}/>
             </div>
             <div>
-                {params.nome}
+                <div className={styles.racaCard}>
+                    {params.raca}
+                </div>
+                <div className={styles.nomeCard}>
+
+                    {params.nome}
+                </div>
             </div>
         </div>
     )
