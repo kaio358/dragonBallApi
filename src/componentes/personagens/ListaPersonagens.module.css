@@ -5,3 +5,33 @@
     padding: 10px;
     gap: 15px;
 }
+.passarPaginas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    margin: 10px auto;
+    font-size: 25px;
+    color: white;
+    padding: 10px;
+    background-color: #333;
+}
+
+.setas {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.setas:hover {
+    transform: scale(1.2);
+}
+
+.passarPaginas span {
+    margin: 0 15px;
+    font-size: 20px;
+    color: white;
+}
+
