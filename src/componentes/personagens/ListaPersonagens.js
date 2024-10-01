@@ -41,26 +41,43 @@ function ListaPersonagens() {
             })
         
     },[paginaAtual])
-    
+
+
+    const gerarPaginacao = (totalDePaginas, paginaAtual) => {
+        const paginas = [];
+      
+        for (let i = 1; i <= totalDePaginas; i++) {
+          if (i === 1 || i === totalDePaginas || (i >= paginaAtual - 1 && i <= paginaAtual + 1)) {
+            paginas.push(<span key={i} onClick={()=>setPaginaAtual(i)}>{i}</span>);
+          } else if (i === 2 || i === totalDePaginas - 1) {
+            paginas.push(<span key={i}>...</span>);
+          }
+        }
+      
+        return paginas;
+      };
+
    
     
     return (
-        <div>
+        <div className={styles.ConteudoPrincipal}>
             <div className={styles.caixaDaLista}>
                 {dadosParaCards ? dadosParaCards.items.map(c=>(
                     <CardPersonagem key={c.id} nome={c.name} raca={c.race} identificacao={c.id} imagem={c.image} />
                 )) : ""}
             </div>
             <div className={styles.passarPaginas}>
-                <MdArrowLeft className={styles.setas}/>
+                <MdArrowLeft className={styles.setas} onClick={()=>{if(paginaAtual>1) setPaginaAtual( paginaAtual-1)}}/>
                 
-                {[...Array(totalDePaginas)].map((_,index)=>{
+                {/* {[...Array(totalDePaginas)].map((_,index)=>{
+                        
                         return <span key={index+1}>{index+1}</span>
-                })}
+                })} */}
+                {gerarPaginacao(totalDePaginas,paginaAtual)}
               
                
                 
-                <MdArrowRight className={styles.setas}/>
+                <MdArrowRight className={styles.setas}  onClick={()=>{if(paginaAtual<totalDePaginas) setPaginaAtual(paginaAtual+1)}}/>
                 
             </div>
         </div>
