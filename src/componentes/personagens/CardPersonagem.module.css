@@ -31,3 +31,8 @@
     /* color: rgb(251, 192, 45) ; */
     color: rgb(54, 51, 51);
 }
+@media (min-width:320) and(max-width:480){
+    .caixaDoCard{
+        
+    }
+}

@@ -7,8 +7,6 @@ import CardPersonagem from "./CardPersonagem";
 import { MdArrowLeft, MdArrowRight } from "react-icons/md";
 
 
-
-
 function ListaPersonagens() {
     const [paginaAtual,setPaginaAtual] = useState(1)
     const [totalDePaginas,setTotalDePaginas] = useState()
