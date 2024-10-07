@@ -11,6 +11,7 @@ function App() {
           <Menu />
           <Routes>
             <Route exact path="/" element={<ListaPersonagens />} />
+            <Route exact path="/filtro"  />
           </Routes>
         </header>
       </Router>
