@@ -58,7 +58,7 @@ function ListaPersonagens() {
    
     
     return (
-        <div className={styles.ConteudoPrincipal}>
+        <div >
             <div className={styles.caixaDaLista}>
                 {dadosParaCards ? dadosParaCards.items.map(c=>(
                     <CardPersonagem key={c.id} nome={c.name} raca={c.race} identificacao={c.id} imagem={c.image} />
