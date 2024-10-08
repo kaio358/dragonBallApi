@@ -16,6 +16,7 @@ function CardPersonagem(params) {
 
                     {params.nome}
                 </div>
+               
             </div>
         </div>
     )

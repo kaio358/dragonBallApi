@@ -1,4 +1,6 @@
 import { useEffect,useState } from "react";
+import { Link } from "react-router-dom";
+
 
 import styles from "./ListaPersonagens.module.css";
 
@@ -61,7 +63,8 @@ function ListaPersonagens() {
         <div >
             <div className={styles.caixaDaLista}>
                 {dadosParaCards ? dadosParaCards.items.map(c=>(
-                    <CardPersonagem key={c.id} nome={c.name} raca={c.race} identificacao={c.id} imagem={c.image} />
+                    <Link to={`/personagem?id=${c.id}`}><CardPersonagem key={c.id} nome={c.name} raca={c.race} identificacao={c.id} imagem={c.image} /></Link>
+                    
                 )) : ""}
             </div>
             <div className={styles.passarPaginas}>

@@ -1,0 +1,48 @@
+.principalCaixaPersonagem {
+    display: grid;
+    font-family: "Flexo-Demi", arial, sans-serif;
+    grid-template-areas: 
+        "nome nome nome"  
+        "imagem imagem descricao";  
+        
+    /* grid-template-columns: 1fr 2fr;  */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 5px 5px black;
+    width: 80vw; 
+    height: 80vh;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.nomePersonagem {
+    grid-area: nome;
+    text-align: center; 
+    font-size: 30px;
+    color: black;
+    margin-bottom: 20px; 
+}
+
+.caixaDeImagemPersonagem {
+    grid-area: imagem;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+.imagemPersonagem {
+    max-height: 450px; 
+    max-width: 100%;  
+}
+
+.descricaoPersonagem {
+    grid-area: descricao;
+    color: black;
+    font-size: 14px;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}

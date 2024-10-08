@@ -8,7 +8,7 @@ import CardPersonagem from "./CardPersonagem";
 
 function FiltroNome() {
     const [searchParams] = useSearchParams();
-    const nome = searchParams.get("nome"); // Captura o parâmetro 'nome' da query string
+    const nome = searchParams.get("nome"); 
 
     const [resultados, setResultados] = useState([]);
 
@@ -18,8 +18,8 @@ function FiltroNome() {
         if (nome) {
             try {
              fetch(`https://dragonball-api.com/api/characters?name=${nome}`)
-            .then(dados => dados.json())
-            .then(dados=> setResultados(dados))
+                .then(dados => dados.json())
+                .then(dados=> setResultados(dados))
             // const data = await response.json();
             
             } catch (error) {
